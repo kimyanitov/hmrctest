@@ -16,5 +16,16 @@ class CheckoutTest extends FlatSpec with Matchers {
 
   }
 
+  it should "apply offers" in {
+    val basket = new Basket()
+    basket.add("Apple")
+    basket.add("Apple")
+    basket.add("Orange")
+    basket.add("Orange")
+    basket.add("Orange")
+
+    Checkout.discount(Apples2F1Offer :: Oranges3F2Offer :: Nil) should be (-85)
+  }
+
 
 }
