@@ -1,9 +1,9 @@
-import org.scalatest.FlatSpec
+import org.scalatest.{FlatSpec, Matchers}
 
 /**
   * Created by kostya on 11/10/2016.
   */
-class Oranges3F2OfferTest extends FlatSpec {
+class Oranges3F2OfferTest extends FlatSpec with Matchers {
 
   it should "produce discount of 1 orange cost for every 3 oranges" in {
     val basket = new Basket()

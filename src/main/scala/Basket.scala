@@ -1,7 +1,7 @@
 
 class Basket {
 
-  val items = scala.collection.mutable.MutableList[String]()
+  private val items = scala.collection.mutable.MutableList[String]()
 
   def add(item: String) = items += item
 
