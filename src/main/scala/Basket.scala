@@ -1,8 +1,9 @@
 
 class Basket {
 
-  def add(item: String) = ???
+  val items = scala.collection.mutable.MutableList[String]()
 
-  def getItems: Seq[String] = ???
+  def add(item: String) = items += item
 
+  def getItems: Seq[String] = items.toList
 }
