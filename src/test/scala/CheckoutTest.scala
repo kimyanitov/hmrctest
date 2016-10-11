@@ -24,7 +24,7 @@ class CheckoutTest extends FlatSpec with Matchers {
     basket.add("Orange")
     basket.add("Orange")
 
-    Checkout.discount(Apples2F1Offer :: Oranges3F2Offer :: Nil) should be (-85)
+    Checkout.discount(basket, Apples2F1Offer :: Oranges3F2Offer :: Nil) should be (-85)
   }
 
 
