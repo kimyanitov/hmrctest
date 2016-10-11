@@ -3,6 +3,8 @@
   */
 trait PriceList {
 
-  def getPrice(item: String): Int = ???
+  val prices: Map[String, Int] = Map("Apple" -> 60, "Orange" -> 25)
+
+  def getPrice(item: String): Int = prices(item)
 
 }
